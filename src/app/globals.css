@@ -1,0 +1,63 @@
+:root {
+    --spacing-s1: 5px;
+    --spacing-default: 10px;
+    --spacing-l1: 20px;
+    --border-color-default: #c8c8c8;
+    --border-radius-default: 10px;
+    --border-radius-l1: 15px;
+    --color-light: #b9b9b9;
+    --color-active-default: #4194deFF;
+    --color-warning-default: #de4141;
+    --font-family-default: var(--font-default);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d0d0d0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-default), sans-serif;
+}
+
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400px;
+    height: 850px;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.app-page-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-grow: 1;
+    background-color: #f7f7f7;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--spacing-l1);
+    gap: 15px;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
