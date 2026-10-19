@@ -12,9 +12,14 @@ const defaultFont = localFont({
     variable: '--font-default'
 });
 
+const serifFont = localFont({
+    src: '../assets/fonts/NotoSerif-VariableFont_wdth,wght.ttf',
+    variable: '--font-serif'
+});
+
 export default function RootLayout({children}: RootLayoutProps) {
     return (
-        <html className={`${defaultFont.variable}`}>
+        <html className={`${defaultFont.variable} ${serifFont.variable}`}>
             <head>
                 <title>Application</title>
                 <meta name='viewport' content='width=device-width, initial-scale=1.0'/>

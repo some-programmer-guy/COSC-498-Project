@@ -1,0 +1,122 @@
+.book-card {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    padding: var(--spacing-l1);
+    border-radius: var(--border-radius-l2);
+    border: 1px solid var(--int-border);
+    gap: var(--spacing-default);
+}
+
+.book-details {
+    width: 100%;
+}
+
+.book-cover {
+    width: 90px;
+    min-width: 90px;
+    height: 120px;
+    background-color: var(--page-background);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0;
+    object-fit: cover;
+}
+
+.book-input-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+
+    .label {
+        width: 70px;
+        flex-shrink: 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .input {
+        flex-grow: 1;
+        width: 100%;
+        border: none;
+        font-size: 20px;
+
+        &::placeholder {
+            color: #909090;
+            font-style: italic;
+            outline-color: lightblue !important;
+        }
+    }
+}
+
+.chapters {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chapter {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--spacing-l1);
+    border: 1px solid var(--int-border);
+    border-radius: var(--border-radius-l2);
+    box-sizing: border-box;
+    background-color: white;
+    gap: var(--spacing-default);
+
+    .label {
+        width: 55px;
+    }
+
+    .close-icon {
+        font-size: 22px;
+        color: var(--button-int-card-fill);
+        margin: 0 5px 0 0;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .arrows {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--button-int-card-fill);
+        line-height: 1.2;
+        user-select: none;
+
+        > * {
+            cursor: pointer;
+        }
+    }
+}
+
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid var(--int-border);
+    cursor: pointer;
+    user-select: none;
+    font-weight: 900;
+    color: white;
+    font-size: 18px;
+
+    &.complete {
+        border-color: var(--button-int-border);
+        background-color: var(--button-int-fill);
+        color: var(--button-int-text);
+    }
+}

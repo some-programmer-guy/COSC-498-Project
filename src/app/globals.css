@@ -1,14 +1,30 @@
 :root {
+    --button-int-fill: #f8aa1b;
+    --button-int-border: #d9961a;
+    --button-int-text: #8b6724;
+
+    --text-warn-color: #ff0000;
+    --text-success-color: #3bae3b;
+
+    --card-int-background: #ffffff;
+    --int-border: #c8c8c8;
+    --button-int-card-fill: #a9a9a9;
+    --input-placeholder-text: #909090;
+
+    --page-background: #f7f7f7;
+
     --spacing-s1: 5px;
     --spacing-default: 10px;
     --spacing-l1: 20px;
     --border-color-default: #c8c8c8;
     --border-radius-default: 10px;
     --border-radius-l1: 15px;
+    --border-radius-l2: 20px;
     --color-light: #b9b9b9;
     --color-active-default: #4194deFF;
     --color-warning-default: #de4141;
     --font-family-default: var(--font-default);
+    --font-family-serif: var(--font-serif);
 }
 
 html {
@@ -37,7 +53,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 400px;
-    height: 850px;
+    height: 875;
     background-color: white;
     box-sizing: border-box;
 }
@@ -60,4 +76,12 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+.header-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

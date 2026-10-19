@@ -2,13 +2,20 @@
 
 import styles from './navbar.module.css'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+
+import HomeIcon from '../icons/home-icon';
+import CalendarIcon from '../icons/calendar-icon';
+import LibraryIcon from '../icons/library-icon';
+import SettingsIcon from '../icons/settings-icon';
 
 type NavbarButtonsRef = {
     [route: string]: {
         element: HTMLElement | undefined,
-        label: string
+        label: string,
+        icon: React.ReactElement
     }
 }
 
@@ -18,19 +25,23 @@ export default function Navbar() {
     const navbarButtonsRef = useRef<NavbarButtonsRef>({
        '/': {
             element: undefined,
-            label: 'Home'
+            label: 'Home',
+            icon: <HomeIcon></HomeIcon>
        },
        '/calendar': {
             element: undefined,
-            label: 'Calendar'
+            label: 'Calendar',
+            icon: <CalendarIcon></CalendarIcon>
        },
-       '/media': {
+       '/library': {
             element: undefined,
-            label: 'Media'
+            label: 'Library',
+            icon: <LibraryIcon></LibraryIcon>
        },
        '/settings': {
             element: undefined,
-            label: 'Settings'
+            label: 'Settings',
+            icon: <SettingsIcon></SettingsIcon>
        },
     });
 
@@ -63,7 +74,7 @@ export default function Navbar() {
     return (
         <div className={`${styles['navbar']}`}>
             {
-                [...Object.entries(navbarButtonsRef.current)].map(([route, {label}]) => (
+                [...Object.entries(navbarButtonsRef.current)].map(([route, {label, icon}]) => (
                     <Link
                         key={label}
                         href={route}
@@ -74,7 +85,7 @@ export default function Navbar() {
                             }
                         }}
                     >
-                        {label}
+                        {icon}
                     </Link>
                 ))
             }
