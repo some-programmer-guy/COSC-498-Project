@@ -1,9 +1,9 @@
+import PageTitle from "@/adapter/output/presentation/components/headers/page-title";
+
 export default async function Page() {
     return (
         <>
-            <p>
-                Settings page
-            </p>
+            <PageTitle text='Settings'/>
         </>
     )
 }
