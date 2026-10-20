@@ -7,7 +7,7 @@ type HomePageProps = {
 export default function HomePage({ viewModel }: HomePageProps) {
     return (
         <>
-            <p>Hello world.</p>
+            <p>Home page.</p>
         </>
     );
 }
