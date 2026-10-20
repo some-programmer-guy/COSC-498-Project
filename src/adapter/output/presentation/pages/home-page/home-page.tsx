@@ -1,3 +1,4 @@
+import PageTitle from "../../components/headers/page-title";
 import { HomePageVM } from "./home-page-presenter";
 
 type HomePageProps = {
@@ -7,7 +8,7 @@ type HomePageProps = {
 export default function HomePage({ viewModel }: HomePageProps) {
     return (
         <>
-            <p>Home page.</p>
+            <PageTitle text='Home'/>
         </>
     );
 }
